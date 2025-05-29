@@ -79,6 +79,14 @@ docker logs traefik
 - **301 Redirect Loops**: Verify `SECURE_PROXY_SSL_HEADER` in Django settings
 - **Certificate Issues**: Check Traefik logs with `docker logs traefik`
 - **Connection Timeouts**: Verify DNS propagation and firewall settings
+- **Database Connection**: Check PostgreSQL logs and .env credentials
+- **Traefik Dashboard 404**: Ensure correct domain in docker-compose.yml
+
+## Maintenance
+
+- **Update Containers**: `docker compose pull && docker compose up -d --build`
+- **Backup Data**: Backup Docker volumes (postgres_data, redis_data)
+- **Renew Certificates**: Traefik auto-renews SSL certificates
 
 ## Project Components
 
@@ -119,4 +127,3 @@ While this guide covers the basics of deployment, there are several areas that c
 - Adding scaling configurations for high-traffic scenarios
 
 For a comprehensive list of planned improvements, see the [Suggested Improvements](SUGGESITED_IMPROVEMENTS.md) document.
-
